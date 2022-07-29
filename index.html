@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>TestTable</title>
+</head>
+<body>
+
+    <div class="table_block">
+        <p id="title">Цвета</p>
+        <button class="add_row" onclick="addRow()"><i class="fa fa-plus" aria-hidden="true"></i>Добавить цвет/параметр</button>
+        <table id="myTable">
+            <thead>
+                <tr class="title_row">
+                    <th id="all_forms"></th>
+                    <th>Название цвета <i class="fa fa-circle" aria-hidden="true"></i></th>
+                    <th>Полимер <i class="fa fa-circle" aria-hidden="true"></i></th>
+                    <th>Линеатура</th>
+                    <th>Тип печати</th>
+                    <th>Стохастика</th>
+                    <th>Технологии</th>
+                    <th>Углы</th>
+                    <th>Количество</th>
+                    <th>Длина</th>
+                    <th>Ширина</th>
+                </tr>
+            </thead>
+            <!--Content-->
+            <tbody id="tableBody">
+                <tr id="content_row" class="body_rows">
+                    <td class="row_control">
+                        <button class="row_control__button" onclick='alert("I dont know")'><i class="fa fa-files-o" aria-hidden="true"></i></button>
+                        <button class="row_control__button" onclick="cloneRow(this)"><i class="fa fa-clipboard" aria-hidden="true"></i></button>
+                        <button class="row_control__button" id="delite" onclick="delRow(this)"><i class="fa fa-times" aria-hidden="true"></i></button>
+                    </td>
+                    <td>
+                        <input type="text" />
+                    </td>
+                    <td>
+                        <select class="selection_list" onchange="update(this)">
+                            <option selected hidden>Выберите..</option>
+                            <option>11</option>
+                            <option>22</option>
+                            <option>33</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select class="selection_list" onchange="update(this)">
+                            <option selected hidden>Выберите..</option>
+                            <option>11</option>
+                            <option>22</option>
+                            <option>33</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select class="selection_list" onchange="update(this)">
+                            <option selected hidden>Выберите..</option>
+                            <option>11</option>
+                            <option>22</option>
+                            <option>33</option>
+                        </select>
+                    </td>
+                    <td class="check">
+                        <input type="checkbox">
+                    </td>
+                    <td>
+                        
+                        <input type="checkbox" class="checkOfTechnology"><label> HD</label> 
+                        <input type="checkbox" class="checkOfTechnology"><label> LUX</label> 
+                        <input type="checkbox" class="checkOfTechnology" disabled><label>Pixel+</label> 
+                        <input type="checkbox" class="checkOfTechnology"><label> Next</label> 
+                        <input type="checkbox" class="checkOfTechnology"><label> Ultraflex</label> 
+                        <input type="checkbox" class="checkOfTechnology" disabled><label>WP</label> 
+                        <input type="checkbox" class="checkOfTechnology" disabled><label>DigFlow</label> 
+                        <input type="checkbox" class="checkOfTechnology" disabled><label>DigLampc</label>
+                    </td>
+                    <td>
+                        <input type="number" class="size" onkeyup="this.value=this.value.replace(/[^\d.]/g,'')">
+                    </td>
+                    <td>
+                        <input type="number" class="size" onkeyup="this.value=this.value.replace(/[^\d.]/g,'')">
+                    </td>
+                    <td>
+                        <input type="number" class="size" onkeyup="this.value=this.value.replace(/[^\d.]/g,'')">
+                    </td>
+                    <td>
+                        <input type="number" class="size" onkeyup="this.value=this.value.replace(/[^\d.]/g,'')">
+                    </td>
+                </tr>
+                
+            </tbody>
+            <!--End of content-->
+            <tfoot>
+                <tr class="title_row">
+                    <th>Общие параметры:</th>
+                    <th></th>
+                    <td>
+                        <select class="selection_list">
+                            <option selected hidden>Выберите..</option>
+                            <option>11</option>
+                            <option>22</option>
+                            <option>33</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select class="selection_list">
+                            <option selected hidden>Выберите..</option>
+                            <option>11</option>
+                            <option>22</option>
+                            <option>33</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select class="selection_list">
+                            <option selected hidden>Выберите..</option>
+                            <option>11</option>
+                            <option>22</option>
+                            <option>33</option>
+                        </select>
+                    </td>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    
+    <script src="https://use.fontawesome.com/5fc5f1898b.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
